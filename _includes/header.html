@@ -15,6 +15,8 @@
 		</h1>
 	</div>
 	<nav class="site-nav">
+
+
 		<ul>
 			{% for page in site.pages %}
 			{% if page.title and page.hide != true %}
@@ -27,6 +29,9 @@
 			{% endfor %}
 			<!-- Social icons from Font Awesome, if enabled -->
 			{% include icons.html %}
+			<li><a href="https://travis-ci.org/rsnapshot/rsnapshot"><img src="https://travis-ci.org/rsnapshot/rsnapshot.svg?branch=master" alt="Build Status" title="" /></a></li>
+			<li><a aria-label="Star rsnapshot/rsnapshot on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api="/repos/rsnapshot/rsnapshot#stargazers_count" data-count-href="/rsnapshot/rsnapshot/stargazers" data-style="mega" href="https://github.com/rsnapshot/rsnapshot" class="github-button">Star</a></li>
+			<li><a aria-label="Fork rsnapshot/rsnapshot on GitHub" data-count-aria-label="# forks on GitHub" data-count-api="/repos/rsnapshot/rsnapshot#forks_count" data-count-href="/rsnapshot/rsnapshot/network" data-style="mega" href="https://github.com/rsnapshot/rsnapshot/fork" class="github-button">Fork</a></li>
 		</ul>
 	</nav>
 </header>
