@@ -6,7 +6,7 @@ url: "http://rsnapshot.org" # the base hostname & protocol for your site
 theme:
   # Meta
   title: rsnapshot
-  avatar: /
+  avatar:
   gravatar: # Email MD5 hash
   description: "rsync-based backup utility" # used by search engines
 
