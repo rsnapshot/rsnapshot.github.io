@@ -2,6 +2,14 @@
 
 use List::MoreUtils qw(uniq);
 
+# The index.md-file is generated with this little script
+# use it the following way:
+#
+# ls | ./gen.pl > index.md
+#
+# This script generates valid markdown-output with a jekyll-header.
+# It reads all files and compiles the versions together in a table.
+
 my @files = ( ".tar.gz", "-1.deb", "-1.noarch.rpm" );
 my @sigs = ( "asc", "sha1", "md5", "sha256");
 my @versions = ();
