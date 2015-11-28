@@ -21,7 +21,7 @@ modern UNIX compatible OS.
 rsnapshot was originally based on an article called [Easy Automated Snapshot-Style Backups with Linux and Rsync](http://www.mikerubel.org/computers/rsync_snapshots/), by Mike Rubel.
 
 If this is your first experience with rsnapshot, you may want to read the
-rsnapshot HOWTO at http://www.rsnapshot.org/. The HOWTO will give you a detailed
+rsnapshot [HOWTO](http://rsnapshot.org/rsnapshot/docs/docbook/rest.html). The HOWTO will give you a detailed
 walk-through on how to get rsnapshot up and running in explicit detail.
 
 rsnapshot comes with ABSOLUTELY NO WARRANTY.  This is free software,
