@@ -5,7 +5,7 @@ hide: true
 ---
 | VERSION | FILE | CHECKSUMS |
 | :-----: | :--: | :-------: |
-| 1.4.1 | [rsnapshot-1.4.1.tar.gz](rsnapshot-1.4.1.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.1.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.1.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.1.tar.gz.sha256)<br> |
+ | 1.4.1 | [rsnapshot-1.4.1.tar.gz](rsnapshot-1.4.1.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.1.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.1.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.1.tar.gz.sha256)<br> |
  | 1.4.0 | [rsnapshot-1.4.0.tar.gz](rsnapshot-1.4.0.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.0.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.0.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.0.tar.gz.sha256)<br> |
  | 1.3.1 | [rsnapshot-1.3.1.tar.gz](rsnapshot-1.3.1.tar.gz)<br>[rsnapshot-1.3.1-1.noarch.rpm](rsnapshot-1.3.1-1.noarch.rpm)<br> |  [tar.gz.asc](rsnapshot-1.3.1.tar.gz.asc)<br> [tar.gz.sha1](rsnapshot-1.3.1.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.3.1.tar.gz.md5)<br> [noarch.rpm.asc](rsnapshot-1.3.1-1.noarch.rpm.asc)<br> [noarch.rpm.sha1](rsnapshot-1.3.1-1.noarch.rpm.sha1)<br> [noarch.rpm.md5](rsnapshot-1.3.1-1.noarch.rpm.md5)<br> |
  | 1.3.0 | [rsnapshot-1.3.0.tar.gz](rsnapshot-1.3.0.tar.gz)<br>[rsnapshot-1.3.0-1.noarch.rpm](rsnapshot-1.3.0-1.noarch.rpm)<br> |  [tar.gz.asc](rsnapshot-1.3.0.tar.gz.asc)<br> [tar.gz.sha1](rsnapshot-1.3.0.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.3.0.tar.gz.md5)<br> [noarch.rpm.asc](rsnapshot-1.3.0-1.noarch.rpm.asc)<br> [noarch.rpm.sha1](rsnapshot-1.3.0-1.noarch.rpm.sha1)<br> [noarch.rpm.md5](rsnapshot-1.3.0-1.noarch.rpm.md5)<br> |
