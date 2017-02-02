@@ -123,4 +123,46 @@ to your config-file (assuming you don't have `ssh_args` currently).
 
 ### After I've taken a few snapshots, why do they all show up the same size in df? I thought rsnapshot was meant to only take one full snapshot and then a bunch of incrementals?
 
-You thought right, and it does! It looks like you've got a bunch of full snapshots because any file which hasn't changed between two consecutive snapshots will be a [hard link](http://en.wikipedia.org/wiki/Hard_link), so potentially several directory entries in consecutive snapshots may actually point at the same data on disk, so the only space taken up by a snapshot is whatever is different between it and the previous one. Using the `du` utility to gauge your disk usage will normally produce confusing results because of this. The `rsnapshot-diff` utility solves this. You could also use the `-c` argument to `du`.
+You thought right, and it does! It looks like you've got a bunch of full snapshots because any file which hasn't changed between two consecutive snapshots will be a [hard link](http://en.wikipedia.org/wiki/Hard_link), so potentially several directory entries in consecutive snapshots may actually point at the same data on disk, so the only space taken up by a snapshot is whatever is different between it and the previous one.
+
+The `du` utility can detect hard-links and count them correctly only
+if the all the directories containing the hard-links are counted at
+the same time (that is: all given on the same command line to `du`).
+
+In the following example, assume `hourly.0` contains 500GB worth of files,
+and `hourly.1/2` contain *only* hardlinks. Compare running `du` on each
+directory separately versus counting them all at once:
+
+    $ ls
+    hourly.0
+    hourly.1
+    hourly.2
+
+    $ du -sh hourly.0
+    500G    hourly.0
+
+    $ du -sh hourly.1
+    500G    hourly.1
+
+    $ du -sh hourly.2
+    500G    hourly.2
+
+    $ du -sh *
+    500G    hourly.0
+    442K    hourly.1
+    442K    hourly.2
+
+`du` keeps a list of all files internally and if a second hardlink to
+a file is found it is not counted again. This is of course not
+possible when counting each directory separately. The 442K size in the
+example above is the additional space hardlinks consume on the
+filesystem (large number of files will increase this value).
+
+Using the `-c` option (=print total) will also print the correct amount
+of consumed disk space:
+
+    $ du -shc
+    500G    .
+    500G    total
+
+Alternatively, the `rsnapshot-diff` can be used to show differences between snapshots.
