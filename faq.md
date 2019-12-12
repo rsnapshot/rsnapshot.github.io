@@ -2,9 +2,9 @@
 layout: page
 title: FAQ
 ---
-### How do I restore files with rsnapshot? 
+### How do I restore files with rsnapshot?
 
-If you have super-user access on the rsnapshot server, you can just copy the files from the snapshot root (eg: /.snapshots/daily.0/server/directory/file). The daily backups will be more recent than the weeklys, and the weekly more recent than the monthlys, etc. Your system administrator may have set up a **read-only** copy of the snapshot root (eg: with read-only NFS or read-only Samba), as suggested in the [HOWTO](/howto/1.2/rsnapshot-HOWTO.en.html#restoring_backups). If so, it is better (safer and possibly more convenient) to copy files from this read-only copy of the snapshot root.
+If you have super-user access on the rsnapshot server, you can just copy the files from the snapshot root (eg: /.snapshots/daily.0/server/directory/file). The daily backups will be more recent than the weeklys, and the weekly more recent than the monthlys, etc. Your system administrator may have set up a **read-only** copy of the snapshot root (eg: with read-only NFS or read-only Samba). If so, it is better (safer and possibly more convenient) to copy files from this read-only copy of the snapshot root.
 
 ### I have a snapshot root or backup point with a space (or other special character) in it and this is not working at all with rsnapshot 1.3.1. Why?
 
@@ -34,9 +34,9 @@ rsnapshot does two major things - actual backup (with rsync) and rotation (movin
 For example, if you have `sync_first` enabled, then you need to run `rsnapshot sync` (which makes a backup) before you can do a rotation like `rsnapshot hourly` or `rsnapshot daily`. With sync_first enabled, all intervals (hourly, daily, etc) just do rotation.
 
 If you do not have `sync_first` (it is disabled by default), then the backup is made by the *lowest* interval (that is, the first one that you listed in your rsnapshot.conf). The other (higher) intervals do rotation.
-For example, if you have intervals `hourly`, `daily`, `weekly` and `monthly`, then you need to run `rsnapshot hourly` to do a backup before the other intervals (daily, weekly and monthly which do rotations) will do anything. 
+For example, if you have intervals `hourly`, `daily`, `weekly` and `monthly`, then you need to run `rsnapshot hourly` to do a backup before the other intervals (daily, weekly and monthly which do rotations) will do anything.
 
-In fact, you need a complete set of hourly backups before a `rsnapshot daily` will do anything. Similarly, you need a complete set of daily backups (usually 7) before `rsnapshot weekly` will do anything. 
+In fact, you need a complete set of hourly backups before a `rsnapshot daily` will do anything. Similarly, you need a complete set of daily backups (usually 7) before `rsnapshot weekly` will do anything.
 
 ### I get warnings like `Could not lchown() symlink`. Help?
 
@@ -62,14 +62,14 @@ Thanks to Mark Murphy for writing this entry!
 
 ### Can I set the `snapshot_root` to a remote SSH path? I want to push my backups to a remote server, rather than pull them from a remote server.
 
-Rsnapshot does **not** support a remote snapshot root via SSH. 
-However you should be able to use a remote snapshot root that is NFS mounted 
+Rsnapshot does **not** support a remote snapshot root via SSH.
+However you should be able to use a remote snapshot root that is NFS mounted
 on the machine that runs rsnapshot but hosted on another machine (NFS server).
 
 If you are running rsnapshot as user root (which is the normal case),
-make sure that the NFS server allows root access for that NFS mount to 
-the rsnapshot machine as an NFS client. 
-For a solaris NFS server, see root= in share_nfs(1). 
+make sure that the NFS server allows root access for that NFS mount to
+the rsnapshot machine as an NFS client.
+For a solaris NFS server, see root= in share_nfs(1).
 For a Linux NFS server, see no_root_squash in exports(5).
 Otherwise you might get errors about chown, removing directories/files, etc
 if permissions on the NFS server are mapped from "root" to "nobody".
@@ -78,9 +78,9 @@ For advanced users, Matt McCutchen suggested the following alternative.
 What you can do instead is put the rsnapshot configuration file
 on the destination server (with a local snapshot root),
 allocate a "staging" area on that server,
-and define it as the sole backup point. 
+and define it as the sole backup point.
 To make a snapshot, execute an ordinary rsync push to the staging area and then
-invoke rsnapshot on that server to incorporate the new data into a snapshot. 
+invoke rsnapshot on that server to incorporate the new data into a snapshot.
 To do this conveniently over SSH, create the following script
 `rsync-and-kick-rsnapshot` on the destination server:
 
@@ -89,7 +89,7 @@ To do this conveniently over SSH, create the following script
 
 And then pass
 
-    `--rsync-path=*/path/to/*rsync-and-kick-rsnapshot`. 
+    `--rsync-path=*/path/to/*rsync-and-kick-rsnapshot`.
 
 With an rsync daemon, create this script `kick-rsnapshot`:
 
