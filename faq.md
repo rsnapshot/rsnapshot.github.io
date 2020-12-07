@@ -18,7 +18,7 @@ rsnapshot versions 1.2.9 and 1.3.0 have a bug where --link-dest is omitted in th
 
 That's a good question. `sync_first` and `include_conf` were new features added between rsnapshot 1.2.3 and 1.2.9. Unfortunately the maintainers have been short of time and haven't found time to update the HOWTO. If updating the HOWTO is something you can help with, please tell the rsnapshot-discuss list. At least you can find some documentation for these features in the rsnapshot man page.
 
-### Where do I report a bug in rsnaspshot?
+### Where do I report a bug in rsnapshot?
 
 You can report bugs, request features and submit patches to the [Github issue tracker](https://github.com/rsnapshot/rsnapshot/issues).
 
