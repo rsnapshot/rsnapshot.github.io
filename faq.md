@@ -24,8 +24,35 @@ You can report bugs, request features and submit patches to the [Github issue tr
 
 ### How do I backup from Windows machines to Linux?
 
-You can run rsnapshot on a Linux machine (where the backups will be stored), and run [cwRsync](http://www.itefix.no/cwrsync/) Server on the Windows machines so that you can connect to them with ssh protocol or rsyncd protocol. Many people have reported backups hanging in the middle of a backup if they use ssh protocol to Windows machines. You should be able to avoid these hangs by using `rsync://user@host/dir` (rsyncd protocol) in your backup line rather than `user@host:/dir` (rsync over ssh protocol).
+You can run rsnapshot on a Linux machine (where the backups will be stored) and run a `ssh` and `rsync` server on the Windows machine.
+
+#### [cwRsync](https://itefix.net/cwrsync) Server on Windows
+
+An option is to run [cwRsync](https://itefix.net/cwrsync) Server on the Windows machines so that you can connect to them with ssh protocol or rsyncd protocol. Many people have reported backups hanging in the middle of a backup if they use ssh protocol to Windows machines. You should be able to avoid these hangs by using `rsync://user@host/dir` (rsyncd protocol) in your backup line rather than `user@host:/dir` (rsync over ssh protocol).
 But bear in mind that rsyncd protocol is unencrypted, in case you are transferring over an untrusted network (like the Internet). There is a suggestion [secure connections between linux rsync clients and cwRsync servers](http://www.itefix.no/i2/node/11317) in the cwrsync faq, but it would need to be adapted for rsnapshot and customised for your environment.
+
+#### Windows 10 native OpenSSH server and WSL2
+
+For Windows 10 (1809+) machines, another option is to use the native OpenSSH server now available in Windows 10 1809 and WSL2. By using the native ssh server, WSL does not have to be running for the backup to occur.
+ 
+* Install the native [OpenSSH server in powershell](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
+* Key based access is still required and setup can be a bit strange, see the following [StackOverflow post answer](https://stackoverflow.com/a/50502015) for what configuration steps are required.
+* Install WSL2 and your Linux distribution of choice. Make sure `rsync` is installed and available in that distribution.
+* Use WSL2's `rsync` by including `rsync_long_args='--rsync-path=wsl rsync'` in the `backup` command. Take care with the single quote placement so the configuration will be executed correctly. By providing `wsl rsync`, this executes the `rsync` command in WSL instead of trying to execute it via Windows.
+
+##### Example `backup` command configuration for Windows machines
+ 
+This assumes that key based access for John Doe is properly configured on the remote system. (And that tabs are used between the fields)
+ 
+    backup    192.168.1.2:/mnt/c/users/John\ Doe/    johndoe/    rsync_long_args='--rsync-path=wsl rsync',ssh_args=-l 'John Doe'
+
+### When backing up a Windows machine via `ssh`, how do you use a username with a space in it?
+
+If a username has a space in it, for example 'John Doe', use the `ssh_args` argument in the `backup` command instead of the username being inline with the address. E.g. `ssh_args=-l 'John Doe'`. `rsnapshot` does not currently allow for parsing spaces _before_ the `@` on a backup target. By proving the username via the `-l` argument, we do an end run around the parser. Note, this should be the last argument on the line as there could be some issues parsing the argument with partial quotes.
+
+### When backing up Windows paths, how do I overcome spaces in the path?
+
+To deal with a space in the path, you can simply escape them in the `backup` command. To continue with example user "John Doe", to backup their home directory in Windows use the path `/mnt/c/users/John\ Doe/`. If you're curious why escaping the space works here but not for the username, it's because the path is sent to the remote system and _then_ parsed.
 
 ### I run rsnapshot for the first time, but nothing happens. Why?
 
