@@ -5,6 +5,7 @@ hide: true
 ---
 | VERSION | FILE | CHECKSUMS |
 | :-----: | :--: | :-------: |
+ | 1.4.4 | [rsnapshot-1.4.4.tar.gz](rsnapshot-1.4.4.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.4.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.4.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.4.tar.gz.sha256)<br> |
  | 1.4.3 | [rsnapshot-1.4.3.tar.gz](rsnapshot-1.4.3.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.3.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.3.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.3.tar.gz.sha256)<br> |
  | 1.4.2 | [rsnapshot-1.4.2.tar.gz](rsnapshot-1.4.2.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.2.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.2.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.2.tar.gz.sha256)<br> |
  | 1.4.1 | [rsnapshot-1.4.1.tar.gz](rsnapshot-1.4.1.tar.gz)<br> |  [tar.gz.sha1](rsnapshot-1.4.1.tar.gz.sha1)<br> [tar.gz.md5](rsnapshot-1.4.1.tar.gz.md5)<br> [tar.gz.sha256](rsnapshot-1.4.1.tar.gz.sha256)<br> |
