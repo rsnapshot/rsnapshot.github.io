@@ -1,0 +1,64 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 16 Oct 2021 22:50:58 +1100
+Source: rsnapshot
+Binary: rsnapshot
+Architecture: all
+Version: 1.4.4-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Guillaume Delacour <gui@iroqwa.org>
+Changed-By: sam <sgpinkus@gmail.com>
+Description:
+ rsnapshot  - local and remote filesystem snapshot utility
+Changes:
+ rsnapshot (1.4.4-1) unstable; urgency=medium
+ .
+   VERSION 1.4.4 (Jun 12 2021)
+   ------------------------------------------------------------------------------
+   - Add sentence explaining rsync_long|short_args + sign to man page (ref #11)
+   - Fix rsnapreport problems (incorrect header, fail when rsync present, fail with LVM) (#204)
+   - Add notes about documentation, and link to the website repo
+   - Fix for 'rsync_cleanup_after_native_cp_al() only works on directories' fail when sync_first on and cmd_cp not set (#133). Add test
+   - Fix for rm -rf failing when the path contains ./
+   - Suppress noisy error from non-GNU cp on BSD-ish machines, including MacOS
+   - Add CentOS 7 to succesfully tested to docs
+   - Minor tidy up rel configure options --with-test-(true|false). Refs #189 (#248)
+   - Update travis build settings (#189). Dont use m4_esyscmd_s in configure.ac (#245)
+   - Update docs to remove dangling refs to HOWTO on rsnapshot.org.
+   - Skip both SSH tests (rather one) if SSH doesn't work
+   - Use perl-5.30 for tests (used in ubuntu 20.04 focal)
+   - Lower verbose level of rsync output to 1.3.x equivalent to work with rsnapreport.pl again
+   - Fix location of true and false binaries on macOS
+ .
+   VERSION 1.4.3 (Nov 17 2019)
+   ------------------------------------------------------------------------------
+   - Fixes and minor updates to Pod / man page.
+   - Adds more tests.
+   - Restore rsync error code 23 as an important warning.
+   - Fixes shortargs appending.
+   - Non-LVM backup source breaks after LVM backup source.
+   - Update rsnapreport.pl utility script to work with rsync >= 3.1.0 stats and bytes changes.
+Checksums-Sha1:
+ 402b8bffb0b3b3d3cb2c14dec4192a6bd3391dfd 128916 rsnapshot_1.4.4-1_all.deb
+ 0b130807f46db0efac2487ade4ccf47016b25e17 6595 rsnapshot_1.4.4-1_amd64.buildinfo
+Checksums-Sha256:
+ 92f9124e93520f955cf7b52dc23a5dbb30e9dd1b7bc8e02536e4e2df4101bf60 128916 rsnapshot_1.4.4-1_all.deb
+ fe07c62127a41ba20a582f0bf3b24a07fb245de6e2e5991e9ae9fc8e2668ac64 6595 rsnapshot_1.4.4-1_amd64.buildinfo
+Files:
+ 4dba88a2fd87a614b120499e949fddc4 128916 utils optional rsnapshot_1.4.4-1_all.deb
+ 09065a677ed292904022eb9270ede18b 6595 utils optional rsnapshot_1.4.4-1_amd64.buildinfo
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEa1QgRUq/pFtmShR8FhspSgVXAq8FAmFqvT4ACgkQFhspSgVX
+Aq+0Gwf+Mlwp9yraQ4vGrjq7U91S37VtnSD8fjEOtioF4bjg2RIr0KqKLHXPymJf
+8FzGDBCssnwX54V8zMx6uRP4oT1pUm5zjdB6ykYxx+zxlYevnIJZfCkfoSwacqfd
+sbSQQOMv+36QvStqthCVscs4+U9T7nADnyM7GXWvcqALfn545c9BOCtApoaajgPx
+OM4Uz1MVEuon9XiHo016P/oKz0OhKdjzgqywBGSMV4/+RriMBbyJ/pxwpG2UKX8e
+8fAMOw6vFLdJHXX1KMEuIQqF+PXVqbVwQLW8pVqRDXlOZ5Iy9uMUUw2Rn+li1tsy
+mf6RkMI9eBY7gEjHoZlMyR5zCt390A==
+=koRe
+-----END PGP SIGNATURE-----

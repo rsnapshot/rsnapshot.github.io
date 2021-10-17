@@ -10,7 +10,7 @@ use List::MoreUtils qw(uniq);
 # This script generates valid markdown-output with a jekyll-header.
 # It reads all files and compiles the versions together in a table.
 
-my @files = ( ".tar.gz", "-1.deb", "-1.noarch.rpm" );
+my @files = ( ".tar.gz", "-1.deb", "-1_all.deb", "-1.noarch.rpm" );
 my @sigs = ( "asc", "sha1", "md5", "sha256");
 my @versions = ();
 
@@ -38,7 +38,7 @@ for $version (uniq reverse sort @versions){
 	print " | ";
 
 	for $file (@files){
-		if( -e "rsnapshot-$version$file"){
+		if( -e "rsnapshot-$version$file" || -e "rsnapshot_$version$file" ){
 			print "[rsnapshot-$version$file](rsnapshot-$version$file)<br>";
 		}
 	}
@@ -49,11 +49,11 @@ for $version (uniq reverse sort @versions){
 		my $visual = $file;
 		$visual =~ s/^(-1)?\.?//;
 		for $sig (@sigs){
-			if( -e "rsnapshot-$version$file.$sig" ){
+			if( -e "rsnapshot-$version$file.$sig" || -e "rsnapshot_$version$file.$sig" ){
 				print " [$visual.$sig](rsnapshot-$version$file.$sig)<br>";
 			}
 		}
 	}
-	
+
 	print " |\n";
 }
