@@ -10,13 +10,15 @@ use List::MoreUtils qw(uniq);
 # This script generates valid markdown-output with a jekyll-header.
 # It reads all files and compiles the versions together in a table.
 
-my @files = ( ".tar.gz", "-1.deb", "-1_all.deb", "-1.noarch.rpm" );
+my @files = (); # ".tar.gz", "-1.deb", "-1_all.deb", "-1.noarch.rpm" );
 my @sigs = ( "asc", "sha1", "md5", "sha256");
 my @versions = ();
 
 for(<>){
 	if(m/rsnapshot(-|_)(([0-9]+\.)+[0-9]+)/){
 		push @versions, $2;
+		$_ =~ s/^\s+|\s+$//g;
+		push @files, $_;
 	}
 }
 
@@ -38,20 +40,17 @@ for $version (uniq reverse sort @versions){
 	print " | ";
 
 	for $file (@files){
-		if( -e "rsnapshot-$version$file" || -e "rsnapshot_$version$file" ){
-			print "[rsnapshot-$version$file](rsnapshot-$version$file)<br>";
+		if( $file =~ /rsnapshot.$version.*\.(tar\.gz|deb|_all\.deb|noarch\.rpm)$/ ){
+			print "[`$file`]($file)<br>";
 		}
 	}
 
 	print " | ";
 
 	for $file (@files){
-		my $visual = $file;
-		$visual =~ s/^(-1)?\.?//;
-		for $sig (@sigs){
-			if( -e "rsnapshot-$version$file.$sig" || -e "rsnapshot_$version$file.$sig" ){
-				print " [$visual.$sig](rsnapshot-$version$file.$sig)<br>";
-			}
+		if( $file =~ /rsnapshot.$version[^.]*\.(.*\.(asc|sha1|md5|sha256))$/ ){
+		  my $visual = $1;
+			print "[`$visual`]($file)<br>";
 		}
 	}
 
