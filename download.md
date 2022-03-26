@@ -9,7 +9,7 @@ All major distros have rsnapshot already packaged. Here are a few links:
 
 * [ArchLinux](https://www.archlinux.org/packages/community/any/rsnapshot/)
 * [Debian](https://packages.debian.org/search?keywords=rsnapshot)
-* [Fedora](https://apps.fedoraproject.org/packages/rsnapshot)
+* [Fedora](https://packages.fedoraproject.org/pkgs/rsnapshot/rsnapshot/)
 * [Gentoo Linux](https://packages.gentoo.org/packages/app-backup/rsnapshot)
 * [Ubuntu](http://packages.ubuntu.com/search?keywords=rsnapshot&searchon=names&suite=all&section=all)
 * [FreeBSD](http://www.freshports.org/sysutils/rsnapshot/)
