@@ -1,0 +1,46 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 27 Dec 2022 18:09:58 +1100
+Source: rsnapshot
+Binary: rsnapshot
+Architecture: all
+Version: 1.4.5-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Guillaume Delacour <gui@iroqwa.org>
+Changed-By: sam <sgpinkus@gmail.com>
+Description:
+ rsnapshot  - local and remote filesystem snapshot utility
+Changes:
+ rsnapshot (1.4.5-1) unstable; urgency=medium
+ .
+   VERSION 1.4.5 (Dec 27 2022)
+   ------------------------------------------------------------------------------
+   - Fix regression in backup dest path normaliser (#310)
+   - Merge pull request #303 from rsnapshot/update-HOWTO-to-talk-about-retain-instead-of-interval
+   - Removing legacy Docbook files, as per discussion at https://github.com/rsnapshot/rsnapshot/pull/296
+   - Merge pull request #296 from hoclun-rigsep/hoclun-rigsep-patch-1
+   - Use @prefix@ instead of hardcoded value in rsnapshot.conf.default.in comment line (#289).
+Checksums-Sha1:
+ 1e389eb518c210362f9feea80376c5e61dbce3e2 129272 rsnapshot_1.4.5-1_all.deb
+ d72c0c54bd3cdf2201054b0db06cabe777c3b32e 6734 rsnapshot_1.4.5-1_amd64.buildinfo
+Checksums-Sha256:
+ 9c75d83eaf64823ed5dab7c2c53202f9ef249b40a6ec39210e1b85bb00b6074c 129272 rsnapshot_1.4.5-1_all.deb
+ 715d66e38d915d3d4de168bb237496d48902888817d9694267af884ce33b695f 6734 rsnapshot_1.4.5-1_amd64.buildinfo
+Files:
+ 6cde319872ffa2e7a166d1803c5f8fe6 129272 utils optional rsnapshot_1.4.5-1_all.deb
+ dd8d686f599e7f11e658578038cbd096 6734 utils optional rsnapshot_1.4.5-1_amd64.buildinfo
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEa1QgRUq/pFtmShR8FhspSgVXAq8FAmOqsoEACgkQFhspSgVX
+Aq9JvAf/ZavlBndZlS4YFgvz3Q02Pjc4vZRmL2w+Yj08ld92T0g73IcpFEzTfINS
+4WOR29UGuaxImd4BEUw3JZWlIpDhVZXNnjvG+TiR0e56fID5kmTWUQBq6C7FGWVN
+m4nB5WlG/a8uLA8/TPo0vf9B3SnFFjkr3gB7NGsUyYKjo+HuusOqi0SEwIQoWkkc
+GQw89SKv7VUGGe/qv9yba0ebBvPNUFngDhWvEqIT1RuDAeFxPxxUt82YkBONuYi2
+NZc68vpH2dYjSC/UdU95R4/Al6TVGh8DAlHeeAQLvCeZ26bQ8lq6IC522gbfSB6Z
+Da4tW5xZdVNUsNkkOL4AKB0tIiSQHg==
+=wx50
+-----END PGP SIGNATURE-----
