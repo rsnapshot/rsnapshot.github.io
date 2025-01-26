@@ -11,7 +11,7 @@ Depending on your configuration, it is quite possible to set up in just a few mi
 
 There are no tapes to change, so once it's set up, your backups can happen automatically untouched by human hands. And because rsnapshot only keeps a fixed (but configurable) number of snapshots, the amount of disk space used will not continuously grow.
 
-It is written entirely in perl with no module dependencies, and has been tested with versions 5.004 through 5.16.3. It should work on any reasonably modern UNIX compatible OS.
+It is written entirely in perl with no module dependencies, and has been tested with versions 5.12 through 5.40. It should work on any reasonably modern UNIX compatible OS.
 
 rsnapshot was originally based on an article called [Easy Automated Snapshot-Style Backups with Linux and Rsync](http://www.mikerubel.org/computers/rsync_snapshots/), by Mike Rubel.
 

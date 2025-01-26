@@ -20,7 +20,7 @@ All major distros have rsnapshot already packaged. Here are a few links:
 
 You can download the finished releases at [http://rsnapshot.org/downloads](http://rsnapshot.org/downloads).
 
-From v1.4.0 on you can download from the [Github releases page](https://github.com/rsnapshot/rsnapshot/releases). The finished tarballs are built with [Travis-CI](https://travis-ci.org/rsnapshot/rsnapshot). All Versions prior to 1.4.0 are built by the maintainers manually and are only available over the rsnapshot-website.
+From v1.4.0 on you can download from the [Github releases page](https://github.com/rsnapshot/rsnapshot/releases). All Versions prior to 1.4.0 are built by the maintainers manually and are only available over the rsnapshot-website.
 
 # git sources
 
