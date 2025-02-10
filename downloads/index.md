@@ -5,7 +5,7 @@ hide: true
 ---
 | VERSION | FILE | CHECKSUMS |
 | :-----: | :--: | :-------: |
- | 1.5.0 | [`rsnapshot-1.5.0.tar.gz`](rsnapshot-1.5.0.tar.gz)<br> | [`tar.gz.md5`](rsnapshot-1.5.0.tar.gz.md5)<br>[`tar.gz.sha1`](rsnapshot-1.5.0.tar.gz.sha1)<br>[`tar.gz.sha256`](rsnapshot-1.5.0.tar.gz.sha256)<br> |
+ | 1.5.1 | [`rsnapshot-1.5.1.tar.gz`](rsnapshot-1.5.1.tar.gz)<br> | [`tar.gz.md5`](rsnapshot-1.5.1.tar.gz.md5)<br>[`tar.gz.sha1`](rsnapshot-1.5.1.tar.gz.sha1)<br>[`tar.gz.sha256`](rsnapshot-1.5.1.tar.gz.sha256)<br> |
  | 1.4.5 | [`rsnapshot_1.4.5-1_all.deb`](rsnapshot_1.4.5-1_all.deb)<br>[`rsnapshot-1.4.5.tar.gz`](rsnapshot-1.4.5.tar.gz)<br> | [`deb.md5`](rsnapshot_1.4.5-1_all.deb.md5)<br>[`deb.sha1`](rsnapshot_1.4.5-1_all.deb.sha1)<br>[`deb.sha256`](rsnapshot_1.4.5-1_all.deb.sha256)<br>[`tar.gz.md5`](rsnapshot-1.4.5.tar.gz.md5)<br>[`tar.gz.sha1`](rsnapshot-1.4.5.tar.gz.sha1)<br>[`tar.gz.sha256`](rsnapshot-1.4.5.tar.gz.sha256)<br> |
  | 1.4.4 | [`rsnapshot_1.4.4-1_all.deb`](rsnapshot_1.4.4-1_all.deb)<br>[`rsnapshot-1.4.4.tar.gz`](rsnapshot-1.4.4.tar.gz)<br> | [`deb.md5`](rsnapshot_1.4.4-1_all.deb.md5)<br>[`deb.sha1`](rsnapshot_1.4.4-1_all.deb.sha1)<br>[`deb.sha256`](rsnapshot_1.4.4-1_all.deb.sha256)<br>[`tar.gz.md5`](rsnapshot-1.4.4.tar.gz.md5)<br>[`tar.gz.sha1`](rsnapshot-1.4.4.tar.gz.sha1)<br>[`tar.gz.sha256`](rsnapshot-1.4.4.tar.gz.sha256)<br> |
  | 1.4.3 | [`rsnapshot-1.4.3.tar.gz`](rsnapshot-1.4.3.tar.gz)<br> | [`tar.gz.md5`](rsnapshot-1.4.3.tar.gz.md5)<br>[`tar.gz.sha1`](rsnapshot-1.4.3.tar.gz.sha1)<br>[`tar.gz.sha256`](rsnapshot-1.4.3.tar.gz.sha256)<br> |
